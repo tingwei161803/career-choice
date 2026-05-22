@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>資料來源與方法 — 職涯羅盤</title>
+<meta name="description" content="職涯羅盤的內容整合自 104、levels.fyi、主計總處、商周、HBR、80,000 Hours 等公開研究來源。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <svg class="rose" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="0.8" opacity="0.5"/>
+        <path d="M24 4 L27 22 L24 24 L21 22 Z" fill="currentColor"/>
+        <path d="M24 44 L21 26 L24 24 L27 26 Z" fill="currentColor" opacity="0.55"/>
+        <path d="M4 24 L22 21 L24 24 L22 27 Z" fill="currentColor" opacity="0.55"/>
+        <path d="M44 24 L26 27 L24 24 L26 21 Z" fill="currentColor" opacity="0.55"/>
+        <circle cx="24" cy="24" r="2.4" fill="currentColor"/>
+      </svg>
+      <span>職涯羅盤<br><small>CAREER COMPASS</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="companies.html">四類公司</a>
+      <a href="navigator.html">職涯導航</a>
+      <a href="sources.html">資料來源</a>
+      <a class="nav-cta" href="quiz.html">開始測驗</a>
+    </nav>
+    <button class="nav-toggle" aria-label="選單">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-num">SOURCES & METHOD</span>
+        <h2>資料來源與方法</h2>
+        <p>本工具的觀點架構改編自林招煌 Alex《你適合哪種公司？》。為了讓內容更具可信度，我們另以網路深度研究，整合台灣與國際的薪資、組織、職涯資料。以下為主要引用來源。</p>
+      </div>
+
+      <div class="panel" style="margin-bottom:40px">
+        <h3 style="margin-bottom:10px">方法說明</h3>
+        <p style="color:var(--paper-dim);font-size:.95rem">
+          四類公司以「本土↔國際化」與「扁平彈性↔制度厚重」兩軸定位。測驗的 12 道情境題各自對兩軸加權計分，正規化後換算成你與四個象限中心的距離，再轉成契合度百分比；第 13 題的職涯階段不影響座標，僅用於導航建議。
+          薪資數字皆為「約略區間」，實際因產業、年資、地區、景氣差異甚大——上市櫃部分採公開揭露的中位數，可於公開資訊觀測站查證；中小企業因好缺多不走人力銀行，檯面資訊偏低估。本工具僅供職涯思考參考。
+        </p>
+      </div>
+
+      <div id="src"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="small">研究彙整自約 90 個公開來源（人力銀行、政府統計、財經媒體、國際職涯研究與第一手職場觀點）。</div>
+    <div><a href="index.html">← 回首頁</a></div>
+  </div>
+</footer>
+
+<noscript><div class="wrap" style="padding:40px 0;color:var(--paper-dim)">來源清單需要啟用 JavaScript。</div></noscript>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function () {
+  if (!window.CC) return;
+  var root = document.getElementById('src');
+  var n = 1;
+  CC.SOURCES.forEach(function (g) {
+    var sec = document.createElement('div');
+    sec.className = 'src-group';
+    var items = g.items.map(function (it) {
+      var idx = (n < 10 ? '0' : '') + n; n++;
+      return '<li><a href="' + it.u + '" target="_blank" rel="noopener"><span class="idx">' + idx + '</span><span>' + it.t + '</span></a></li>';
+    }).join('');
+    sec.innerHTML = '<h3>' + g.group + '</h3><ul class="src-list">' + items + '</ul>';
+    root.appendChild(sec);
+  });
+})();
+</script>
+</body>
+</html>

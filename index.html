@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>職涯羅盤 Career Compass — 你適合哪一種公司？</title>
+<meta name="description" content="從組織設計、權責、領導與遴選四大底層邏輯，剖析台灣職場四類公司。做測驗，找出此刻最適合你的舞台，奪回你的人生選擇權。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <svg class="rose" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="0.8" opacity="0.5"/>
+        <path d="M24 4 L27 22 L24 24 L21 22 Z" fill="currentColor"/>
+        <path d="M24 44 L21 26 L24 24 L27 26 Z" fill="currentColor" opacity="0.55"/>
+        <path d="M4 24 L22 21 L24 24 L22 27 Z" fill="currentColor" opacity="0.55"/>
+        <path d="M44 24 L26 27 L24 24 L26 21 Z" fill="currentColor" opacity="0.55"/>
+        <circle cx="24" cy="24" r="2.4" fill="currentColor"/>
+      </svg>
+      <span>職涯羅盤<br><small>CAREER COMPASS</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="companies.html">四類公司</a>
+      <a href="navigator.html">職涯導航</a>
+      <a href="sources.html">資料來源</a>
+      <a class="nav-cta" href="quiz.html">開始測驗</a>
+    </nav>
+    <button class="nav-toggle" aria-label="選單">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">職涯迷惘必讀</span>
+        <h1>你適合<br>哪一種<span class="accent">公司</span>？</h1>
+        <p class="lede">薪資差異的背後，本質上是你在拿什麼，換取你的「人生選擇權」。從組織設計、權責劃分、領導統御、主管遴選四大底層邏輯，看透台灣職場最常見的四類公司。</p>
+        <p class="byline">改編自 林招煌 Alex《你適合哪種公司？》— 25 年生技、醫藥、FMCG 與電商高階經理人觀點</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="quiz.html">開始測驗 <span class="arrow">→</span></a>
+          <a class="btn btn-ghost" href="companies.html">先看四類公司</a>
+        </div>
+      </div>
+      <div class="compass-art" id="hero-compass"></div>
+    </div>
+  </section>
+
+  <!-- 2x2 模型 + 四類卡 -->
+  <section class="section" id="four">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-num">01 — THE MAP</span>
+        <h2>四類公司，兩個座標軸</h2>
+        <p>每一種企業體系的 DNA 完全不同。我們用「本土 ↔ 國際化」與「扁平彈性 ↔ 制度厚重」兩個座標軸，把台灣最常見的四類公司切成四個象限——各自對應一種你能練就的核心修煉。</p>
+      </div>
+      <div class="cards-4" id="cards"></div>
+    </div>
+  </section>
+
+  <!-- 金句 -->
+  <section class="quote-band">
+    <div class="wrap reveal">
+      <p class="bigquote"><span class="mark">「</span>職涯不是選擇最厲害的公司，而是選擇最適合<span class="accent" style="color:var(--gold)">現在自己</span>的舞台。<span class="mark">」</span></p>
+      <p class="by">— 林招煌 Alex，職場引水人</p>
+    </div>
+  </section>
+
+  <!-- 流程引導 -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-num">02 — HOW IT WORKS</span>
+        <h2>三步驟，重新盤點你的優勢</h2>
+      </div>
+      <div class="cards-4 reveal" style="grid-template-columns:repeat(3,1fr)">
+        <div class="ccard"><span class="num">01</span><h3>做測驗</h3><p>13 題情境選擇，依你的工作風格與偏好，定位你落在四象限的哪個位置。</p></div>
+        <div class="ccard"><span class="num">02</span><h3>看結果</h3><p>主推薦公司型態 + 2D 定位地圖 + 契合度雷達圖，三種視覺一次看懂。</p></div>
+        <div class="ccard"><span class="num">03</span><h3>讀導航</h3><p>結合你的職涯階段，給出修煉路線，並提醒你別把平台的資源當成自己的能力。</p></div>
+      </div>
+      <div style="text-align:center;margin-top:44px" class="reveal">
+        <a class="btn btn-gold" href="quiz.html">立即開始 13 題測驗 <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="small">職涯羅盤 Career Compass — 內容改編自林招煌 Alex 的職場分析，並整合 104、levels.fyi、主計總處、商周、HBR 等公開研究來源。本工具僅供職涯思考參考，非投資或職涯保證。</div>
+    <div><a href="sources.html">資料來源 →</a></div>
+  </div>
+</footer>
+
+<noscript><div class="wrap" style="padding:40px 0;color:var(--paper-dim)">本站的互動內容需要啟用 JavaScript。</div></noscript>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function () {
+  // 渲染四類公司卡
+  var wrap = document.getElementById('cards');
+  if (wrap && window.CC) {
+    CC.ORDER.forEach(function (k, i) {
+      var c = CC.COMPANIES[k];
+      var a = document.createElement('a');
+      a.href = 'companies.html#' + k;
+      a.className = 'ccard reveal';
+      a.style.setProperty('--co', c.color);
+      a.style.setProperty('--co-soft', c.colorSoft);
+      a.style.transitionDelay = (i * 0.06) + 's';
+      a.innerHTML =
+        '<span class="num">0' + (i + 1) + '</span>' +
+        '<span class="qd">' + c.quadrant + '</span>' +
+        '<h3>' + c.name + '</h3>' +
+        '<span class="ability">核心修煉 · ' + c.ability + '</span>' +
+        '<p>' + c.tag + '</p>';
+      wrap.appendChild(a);
+    });
+    // 重新觀察新加入的 reveal 元素
+    document.querySelectorAll('#cards .reveal').forEach(function (el) {
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (es, o) {
+          es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); o.disconnect(); } });
+        }, { threshold: 0.1 }).observe(el);
+      } else { el.classList.add('in'); }
+    });
+  }
+
+  // Hero 羅盤 SVG
+  var hc = document.getElementById('hero-compass');
+  if (hc) {
+    var C = CC.COMPANIES;
+    hc.innerHTML =
+      '<svg viewBox="0 0 400 400" role="img" aria-label="四象限職涯羅盤">' +
+        '<defs><radialGradient id="g" cx="50%" cy="50%" r="50%">' +
+          '<stop offset="0%" stop-color="#1d2530"/><stop offset="100%" stop-color="#0d1117"/>' +
+        '</radialGradient></defs>' +
+        '<circle cx="200" cy="200" r="186" fill="url(#g)" stroke="rgba(216,178,90,.35)" stroke-width="1"/>' +
+        '<circle cx="200" cy="200" r="150" fill="none" stroke="rgba(232,226,211,.10)"/>' +
+        '<circle cx="200" cy="200" r="100" fill="none" stroke="rgba(232,226,211,.08)"/>' +
+        '<line x1="200" y1="22" x2="200" y2="378" stroke="rgba(232,226,211,.14)"/>' +
+        '<line x1="22" y1="200" x2="378" y2="200" stroke="rgba(232,226,211,.14)"/>' +
+        // 四象限色塊
+        quadFill(C.listed.color, 200, 200, -1, -1) +
+        quadFill(C.mnc.color, 200, 200, 1, -1) +
+        quadFill(C.sme.color, 200, 200, -1, 1) +
+        quadFill(C.us.color, 200, 200, 1, 1) +
+        // 指針
+        '<path d="M200 60 L212 200 L200 210 L188 200 Z" fill="' + C.mnc.color + '" opacity=".9"/>' +
+        '<path d="M200 340 L188 200 L200 190 L212 200 Z" fill="' + C.sme.color + '" opacity=".9"/>' +
+        '<circle cx="200" cy="200" r="9" fill="#0d1117" stroke="var(--gold)" stroke-width="2"/>' +
+        // 標籤
+        label(C.listed.name, 116, 92, C.listed.color) +
+        label(C.mnc.name, 284, 92, C.mnc.color) +
+        label(C.sme.name, 116, 318, C.sme.color) +
+        label(C.us.name, 284, 318, C.us.color) +
+        axis('制度厚重', 200, 38) + axis('扁平彈性', 200, 372) +
+      '</svg>';
+  }
+  function quadFill(color, cx, cy, sx, sy) {
+    var r = 150;
+    var x0 = cx, y0 = cy;
+    var x1 = cx + sx * r, y1 = cy;
+    var x2 = cx + sx * r, y2 = cy + sy * r;
+    var x3 = cx, y3 = cy + sy * r;
+    var c = hexA(color, .12);
+    return '<path d="M' + x0 + ' ' + y0 + ' L' + x1 + ' ' + y1 + ' L' + x2 + ' ' + y2 + ' L' + x3 + ' ' + y3 + ' Z" fill="' + c + '"/>';
+  }
+  function label(t, x, y, color) {
+    return '<text x="' + x + '" y="' + y + '" text-anchor="middle" fill="' + color + '" font-family="Noto Serif TC,serif" font-weight="700" font-size="15">' + t + '</text>';
+  }
+  function axis(t, x, y) {
+    return '<text x="' + x + '" y="' + y + '" text-anchor="middle" fill="var(--muted)" font-family="Noto Sans TC,sans-serif" font-size="11" letter-spacing="2">' + t + '</text>';
+  }
+  function hexA(hex, a) {
+    var h = hex.replace('#', '');
+    return 'rgba(' + parseInt(h.substr(0,2),16) + ',' + parseInt(h.substr(2,2),16) + ',' + parseInt(h.substr(4,2),16) + ',' + a + ')';
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>職涯導航 — 職涯羅盤</title>
+<meta name="description" content="不同職涯階段的修煉路線、35-40 中年危機的真相，以及如何分辨「平台能力」與「個人能力」。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <svg class="rose" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="0.8" opacity="0.5"/>
+        <path d="M24 4 L27 22 L24 24 L21 22 Z" fill="currentColor"/>
+        <path d="M24 44 L21 26 L24 24 L27 26 Z" fill="currentColor" opacity="0.55"/>
+        <path d="M4 24 L22 21 L24 24 L22 27 Z" fill="currentColor" opacity="0.55"/>
+        <path d="M44 24 L26 27 L24 24 L26 21 Z" fill="currentColor" opacity="0.55"/>
+        <circle cx="24" cy="24" r="2.4" fill="currentColor"/>
+      </svg>
+      <span>職涯羅盤<br><small>CAREER COMPASS</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="companies.html">四類公司</a>
+      <a href="navigator.html">職涯導航</a>
+      <a href="sources.html">資料來源</a>
+      <a class="nav-cta" href="quiz.html">開始測驗</a>
+    </nav>
+    <button class="nav-toggle" aria-label="選單">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- 階段時間軸 -->
+  <section class="section" style="padding-bottom:30px">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-num">01 — THE ROUTE</span>
+        <h2>每一次跳槽，都該為下一階段累積資產</h2>
+        <p>你的每一次跳槽，都應該是為了下一階段的「人生選擇權」做資產累積，而不是盲目地為別人的 KPI 打工。以下是各職涯階段的修煉路線。</p>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <!-- 中年危機 -->
+  <section class="section" style="border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-num">02 — THE WARNING</span>
+        <h2>35–40 歲的中年危機，真相是什麼？</h2>
+        <p>很多專業經理人在 35 到 40 歲之間陷入中年危機，往往是因為「錯把平台的資源，當成了自己的能力」。</p>
+      </div>
+      <div class="facts reveal" id="facts"></div>
+    </div>
+  </section>
+
+  <!-- 平台 vs 個人能力 -->
+  <section class="section" style="border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-num">03 — THE TEST</span>
+        <h2>平台能力，還是你的能力？</h2>
+        <p>一句話判斷：離開公司後，這項能力還在不在你身上？逐題自問——你的戰功，是平台給的，還是自己長出來的。</p>
+      </div>
+      <div class="panel reveal" style="padding:8px 8px">
+        <table class="checklist" id="checklist">
+          <thead><tr><th>自問</th><th class="plat">偏向「平台能力」</th><th class="self">偏向「個人能力」</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 選擇權金句 -->
+  <section class="quote-band">
+    <div class="wrap reveal">
+      <p class="bigquote"><span class="mark">「</span>你以為的能力，有時只是平台的能力。離開公司後還留在你身上的，才是你<span style="color:var(--gold)">真正的能力</span>。<span class="mark">」</span></p>
+      <p class="by">— 職涯資本核心命題</p>
+      <div style="margin-top:30px"><a class="btn btn-gold" href="quiz.html">開始我的職涯定位測驗 <span class="arrow">→</span></a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="small">數據整合自 104、商周、HBR、勞動部等公開來源。明白不同企業的底層邏輯，你才不會在繁雜的日常內耗中迷失方向。</div>
+    <div><a href="sources.html">資料來源 →</a></div>
+  </div>
+</footer>
+
+<noscript><div class="wrap" style="padding:40px 0;color:var(--paper-dim)">本頁互動內容需要啟用 JavaScript。</div></noscript>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function () {
+  if (!window.CC) return;
+  var C = CC.COMPANIES;
+
+  // 時間軸
+  var tl = document.getElementById('timeline');
+  CC.STAGES.forEach(function (s) {
+    var recos = s.recommend.map(function (k) {
+      var co = C[k];
+      return '<span style="color:' + co.color + ';border-color:' + co.color + ';background:' + co.colorSoft + '">' + co.name + '（' + co.ability + '）</span>';
+    }).join('');
+    var item = document.createElement('div');
+    item.className = 'tl-item';
+    item.innerHTML =
+      '<span class="dot"></span>' +
+      '<div class="age">' + s.label + '</div>' +
+      '<div class="ph">' + s.sub + '</div>' +
+      '<p>' + s.advice + '</p>' +
+      '<div class="recos">' + recos + '</div>';
+    tl.appendChild(item);
+  });
+
+  // 中年危機數據
+  var facts = document.getElementById('facts');
+  CC.MIDLIFE.facts.forEach(function (f) {
+    var d = document.createElement('div');
+    d.className = 'fact';
+    d.innerHTML = '<div class="n">' + f.n + '</div><div class="d">' + f.d + '</div>';
+    facts.appendChild(d);
+  });
+
+  // 檢測表
+  var tb = document.querySelector('#checklist tbody');
+  CC.MIDLIFE.checklist.forEach(function (r) {
+    var tr = document.createElement('tr');
+    tr.innerHTML = '<td class="q">' + r.q + '</td><td class="pv">' + r.platform + '</td><td class="sv">' + r.self + '</td>';
+    tb.appendChild(tr);
+  });
+
+  // reveal
+  document.querySelectorAll('.reveal').forEach(function (el) {
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es, o) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); o.disconnect(); } });
+      }, { threshold: 0.08 }).observe(el);
+    } else { el.classList.add('in'); }
+  });
+})();
+</script>
+</body>
+</html>

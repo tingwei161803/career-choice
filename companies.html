@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>四類公司深度剖析 — 職涯羅盤</title>
+<meta name="description" content="台灣中小企業、上市櫃公司、傳統外商、純美商——薪資範圍、組織權責、領導遴選、文化與真實案例的深度比較。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <svg class="rose" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="0.8" opacity="0.5"/>
+        <path d="M24 4 L27 22 L24 24 L21 22 Z" fill="currentColor"/>
+        <path d="M24 44 L21 26 L24 24 L27 26 Z" fill="currentColor" opacity="0.55"/>
+        <path d="M4 24 L22 21 L24 24 L22 27 Z" fill="currentColor" opacity="0.55"/>
+        <path d="M44 24 L26 27 L24 24 L26 21 Z" fill="currentColor" opacity="0.55"/>
+        <circle cx="24" cy="24" r="2.4" fill="currentColor"/>
+      </svg>
+      <span>職涯羅盤<br><small>CAREER COMPASS</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="companies.html">四類公司</a>
+      <a href="navigator.html">職涯導航</a>
+      <a href="sources.html">資料來源</a>
+      <a class="nav-cta" href="quiz.html">開始測驗</a>
+    </nav>
+    <button class="nav-toggle" aria-label="選單">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="section" style="padding-bottom:24px">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-num">DEEP DIVE</span>
+        <h2>四類公司，底層邏輯全解析</h2>
+        <p>不談表面福利，從組織設計、權責劃分、領導統御、主管遴選四大底層邏輯，搭配整合自 104、levels.fyi、主計總處等公開資料的薪資範圍與真實案例，深度剖析台灣職場最常見的四類公司。</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="blocks"></div>
+
+  <section class="quote-band">
+    <div class="wrap">
+      <p class="bigquote"><span class="mark">「</span>在中小企業練就一身野蠻生存的本領，在頂級外商淬鍊系統化放大的格局。沒有好壞，只有此時此刻的你，需要哪一種<span style="color:var(--gold)">修煉</span>。<span class="mark">」</span></p>
+      <p class="by">— 林招煌 Alex</p>
+      <div style="margin-top:30px"><a class="btn btn-gold" href="quiz.html">測測我適合哪一種 <span class="arrow">→</span></a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="small">薪資數字皆為約略區間，實際因產業、年資、景氣差異甚大，請勿視為精確標準。完整引用見資料來源頁。</div>
+    <div><a href="sources.html">資料來源 →</a></div>
+  </div>
+</footer>
+
+<noscript><div class="wrap" style="padding:40px 0;color:var(--paper-dim)">本站的互動內容需要啟用 JavaScript。</div></noscript>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function () {
+  var root = document.getElementById('blocks');
+  if (!root || !window.CC) return;
+  CC.ORDER.forEach(function (k, i) {
+    var c = CC.COMPANIES[k];
+    var sec = document.createElement('section');
+    sec.className = 'company-block reveal';
+    sec.id = k;
+    sec.style.setProperty('--co', c.color);
+    sec.style.setProperty('--co-soft', c.colorSoft);
+
+    var dims = c.dimensions.map(function (d) {
+      return '<div class="dim"><h4>' + d.h + '</h4><p>' + d.t + '</p></div>';
+    }).join('');
+
+    var sal = c.salary.map(function (s) {
+      return '<tr><td class="lv">' + s.lv + '</td><td class="rg">' + s.range + '</td><td class="nt">' + s.note + '</td></tr>';
+    }).join('');
+
+    var pros = c.pros.map(function (p) { return '<li>' + p + '</li>'; }).join('');
+    var cons = c.cons.map(function (p) { return '<li>' + p + '</li>'; }).join('');
+    var tags = c.examples.map(function (e) { return '<span>' + e + '</span>'; }).join('');
+
+    sec.innerHTML =
+      '<div class="wrap">' +
+        '<div class="company-head">' +
+          '<span class="ord">0' + (i + 1) + '</span>' +
+          '<h2>' + c.name + '</h2>' +
+          '<span class="pill">' + c.quadrant + '</span>' +
+          '<span class="pill" style="background:var(--co-soft)">核心修煉 · ' + c.ability + '</span>' +
+        '</div>' +
+        '<p class="company-lead">' + c.oneLiner + '</p>' +
+        '<div class="dim-grid">' + dims + '</div>' +
+        '<div class="info-cols">' +
+          '<div>' +
+            '<h4 style="color:var(--co);margin-bottom:14px">薪資範圍（約略區間）</h4>' +
+            '<table class="salary-table"><thead><tr><th>職級</th><th>年薪</th><th>說明</th></tr></thead><tbody>' + sal + '</tbody></table>' +
+            '<p class="salary-foot">' + c.salaryNote + '</p>' +
+          '</div>' +
+          '<div class="proscons">' +
+            '<div class="pc pros"><h5>優點</h5><ul>' + pros + '</ul></div>' +
+            '<div class="pc cons"><h5>缺點</h5><ul>' + cons + '</ul></div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="fit-row">' +
+          '<div class="fb"><div class="k">適合的人格特質</div><div class="v">' + c.fit + '</div></div>' +
+          '<div class="fb"><div class="k">適合的職涯階段</div><div class="v">' + c.stageFit + '</div></div>' +
+          '<div class="fb"><div class="k">代表企業 / 產業</div><div class="tags">' + tags + '</div></div>' +
+        '</div>' +
+      '</div>';
+    root.appendChild(sec);
+  });
+
+  // reveal
+  document.querySelectorAll('.company-block.reveal').forEach(function (el) {
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es, o) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); o.disconnect(); } });
+      }, { threshold: 0.06 }).observe(el);
+    } else { el.classList.add('in'); }
+  });
+
+  // 若帶 hash，捲動定位
+  if (location.hash) {
+    var t = document.getElementById(location.hash.slice(1));
+    if (t) setTimeout(function () { t.scrollIntoView({ behavior: 'smooth' }); }, 200);
+  }
+})();
+</script>
+</body>
+</html>

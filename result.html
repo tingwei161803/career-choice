@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>你的職涯定位 — 職涯羅盤</title>
+<meta name="description" content="你的測驗結果：最適合的公司型態、2D 定位地圖、契合度雷達圖與職涯階段導航建議。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <svg class="rose" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="0.8" opacity="0.5"/>
+        <path d="M24 4 L27 22 L24 24 L21 22 Z" fill="currentColor"/>
+        <path d="M24 44 L21 26 L24 24 L27 26 Z" fill="currentColor" opacity="0.55"/>
+        <path d="M4 24 L22 21 L24 24 L22 27 Z" fill="currentColor" opacity="0.55"/>
+        <path d="M44 24 L26 27 L24 24 L26 21 Z" fill="currentColor" opacity="0.55"/>
+        <circle cx="24" cy="24" r="2.4" fill="currentColor"/>
+      </svg>
+      <span>職涯羅盤<br><small>CAREER COMPASS</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="companies.html">四類公司</a>
+      <a href="navigator.html">職涯導航</a>
+      <a href="sources.html">資料來源</a>
+      <a class="nav-cta" href="quiz.html">重新測驗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="result-hero">
+    <div class="wrap">
+      <span class="eyebrow">你的職涯定位</span>
+      <h1>此刻最適合你的舞台是<br><span class="nm" id="r-name">—</span></h1>
+      <p class="ability-line" id="r-ability"></p>
+      <p style="color:var(--muted);margin-top:8px;font-size:.92rem">象限定位 · <span id="r-quadrant"></span></p>
+    </div>
+  </section>
+
+  <section style="padding-bottom:30px">
+    <div class="wrap">
+      <div class="result-grid">
+        <!-- 2D 定位地圖 -->
+        <div class="panel">
+          <h3>你的座標地圖</h3>
+          <p class="sub">你落在「本土↔國際 × 扁平↔制度」的哪個象限</p>
+          <div class="map-wrap"><svg id="map" aria-label="2D 定位地圖"></svg></div>
+        </div>
+        <!-- 雷達圖 -->
+        <div class="panel">
+          <h3>四類公司契合度</h3>
+          <p class="sub">你對四種公司型態的傾向強弱</p>
+          <div class="radar-wrap"><svg id="radar" aria-label="契合度雷達圖"></svg></div>
+        </div>
+        <!-- 契合度排行 -->
+        <div class="panel">
+          <h3>契合度排行</h3>
+          <p class="sub">數字越高，代表你的工作風格越接近該型態的人</p>
+          <div id="r-matches" style="margin-top:8px"></div>
+          <p style="color:var(--paper-dim);margin-top:18px" id="r-oneliner"></p>
+        </div>
+        <!-- 修煉建議 -->
+        <div class="panel">
+          <h3>你的核心修煉 · <span id="advice-ability"></span></h3>
+          <p class="sub">如何在這裡奪回你的選擇權</p>
+          <div class="advice-box"><div class="k">如何奪回選擇權</div><p id="advice-text"></p></div>
+        </div>
+        <!-- 職涯階段導航 -->
+        <div class="panel full">
+          <h3>職涯階段導航 · <span id="stage-label"></span></h3>
+          <p class="sub">結合你的階段，給出修煉路線</p>
+          <p style="color:var(--paper-dim)" id="stage-advice"></p>
+          <div id="stage-recos"></div>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <a class="btn btn-gold" href="navigator.html">看完整職涯導航 <span class="arrow">→</span></a>
+        <a class="btn btn-ghost" href="companies.html">回顧四類公司</a>
+        <a class="btn btn-ghost" href="quiz.html">重新測驗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="small">測驗結果僅供職涯思考參考。沒有最好的公司，只有最適合此刻的你的舞台。</div>
+    <div><a href="sources.html">資料來源 →</a></div>
+  </div>
+</footer>
+
+<noscript><div class="wrap" style="padding:40px 0;color:var(--paper-dim)">結果頁需要啟用 JavaScript。</div></noscript>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/result.js"></script>
+</body>
+</html>
