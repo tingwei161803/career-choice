@@ -117,6 +117,13 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 700; line-height: 1.22;
   transition: all 0.25s var(--ease);
 }
 .nav-cta:hover { background: var(--gold); color: var(--ink-900) !important; }
+.nav-gh {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; color: var(--paper-dim);
+  border-radius: 50%; transition: color 0.25s, background 0.25s;
+}
+.nav-gh:hover { color: var(--gold); background: var(--ink-700); }
+.nav-gh svg { display: block; }
 .nav-toggle { display: none; background: none; border: 0; color: var(--paper); cursor: pointer; }
 
 /* ---------- 按鈕 ---------- */

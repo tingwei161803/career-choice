@@ -8,6 +8,15 @@
 
 ---
 
+## 🌐 立即試用
+
+| 環境 | 連結 |
+| --- | --- |
+| **GitHub Pages（live）** | <https://tingwei161803.github.io/career-choice/> |
+| 本地（`git clone` 後） | 直接打開 [`index.html`](./index.html)，或 `uv run python -m http.server 8123` |
+
+---
+
 ## ✨ 功能特色
 
 - **2×2 定位模型** — 用「本土 ↔ 國際化」與「扁平彈性 ↔ 制度厚重」兩軸，把四類公司切成四象限，各對應一種核心修煉。
