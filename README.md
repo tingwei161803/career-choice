@@ -12,7 +12,7 @@
 
 | 環境 | 連結 |
 | --- | --- |
-| **GitHub Pages（live）** | <https://tingwei161803.github.io/career-choice/> |
+| **GitHub Pages（live）** | <https://career-choice.peteraim.com/> |
 | 本地（`git clone` 後） | 直接打開 [`index.html`](./index.html)，或 `uv run python -m http.server 8123` |
 
 ---
