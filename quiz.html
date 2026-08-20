@@ -13,6 +13,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>職涯定位測驗 — 職涯羅盤</title>
+<meta property="og:url" content="https://career-choice.peteraim.com/quiz.html" />
+<link rel="canonical" href="https://career-choice.peteraim.com/quiz.html" />
 <meta name="description" content="13 題情境測驗，定位你落在四象限的位置，找出此刻最適合你的公司型態。" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,22 +49,22 @@
 </header>
 
 <main>
-  <div class="wrap">
+<div class="wrap">
     <div class="quiz-shell">
-      <div class="progress"><i id="q-bar"></i></div>
+      <div class="progress"><i id="q-bar" style="width: 0%;"></i></div>
       <div class="progress-meta">
         <span>職涯定位測驗</span>
         <span id="q-step">01 / 13</span>
       </div>
 
-      <div class="qcard" id="q-card">
+      <div class="qcard" id="q-card" style="">
         <span class="qn" id="q-num">Q1</span>
-        <h2 id="q-title">載入中…</h2>
-        <div class="opts" id="q-opts"></div>
+        <h2 id="q-title">你心目中理想的工作節奏是？</h2>
+        <div class="opts" id="q-opts"><button class="opt" type="button"><span class="mk">A</span><span>一人多工、什麼都碰，今天行銷明天談供應鏈</span></button><button class="opt" type="button"><span class="mk">B</span><span>層級分明、照簽呈與制度走，責任歸屬清楚</span></button><button class="opt" type="button"><span class="mk">C</span><span>對接亞太/全球團隊，把總部策略在地落地</span></button><button class="opt" type="button"><span class="mk">D</span><span>自訂目標、用數據衝刺，高度自主</span></button></div>
       </div>
 
       <div class="quiz-nav">
-        <button class="lnk" id="q-back">← 上一題</button>
+        <button class="lnk" id="q-back" disabled="">← 上一題</button>
         <span class="lnk" style="color:var(--muted);cursor:default">選擇後自動前進</span>
       </div>
     </div>
