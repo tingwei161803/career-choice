@@ -50,59 +50,26 @@
 </header>
 
 <main>
-  <section class="result-hero">
-    <div class="wrap">
-      <span class="eyebrow">你的職涯定位</span>
-      <h1>此刻最適合你的舞台是<br><span class="nm" id="r-name">—</span></h1>
-      <p class="ability-line" id="r-ability"></p>
-      <p style="color:var(--muted);margin-top:8px;font-size:.92rem">象限定位 · <span id="r-quadrant"></span></p>
-    </div>
-  </section>
-
-  <section style="padding-bottom:30px">
-    <div class="wrap">
-      <div class="result-grid">
-        <!-- 2D 定位地圖 -->
-        <div class="panel">
-          <h3>你的座標地圖</h3>
-          <p class="sub">你落在「本土↔國際 × 扁平↔制度」的哪個象限</p>
-          <div class="map-wrap"><svg id="map" aria-label="2D 定位地圖"></svg></div>
-        </div>
-        <!-- 雷達圖 -->
-        <div class="panel">
-          <h3>四類公司契合度</h3>
-          <p class="sub">你對四種公司型態的傾向強弱</p>
-          <div class="radar-wrap"><svg id="radar" aria-label="契合度雷達圖"></svg></div>
-        </div>
-        <!-- 契合度排行 -->
-        <div class="panel">
-          <h3>契合度排行</h3>
-          <p class="sub">數字越高，代表你的工作風格越接近該型態的人</p>
-          <div id="r-matches" style="margin-top:8px"></div>
-          <p style="color:var(--paper-dim);margin-top:18px" id="r-oneliner"></p>
-        </div>
-        <!-- 修煉建議 -->
-        <div class="panel">
-          <h3>你的核心修煉 · <span id="advice-ability"></span></h3>
-          <p class="sub">如何在這裡奪回你的選擇權</p>
-          <div class="advice-box"><div class="k">如何奪回選擇權</div><p id="advice-text"></p></div>
-        </div>
-        <!-- 職涯階段導航 -->
-        <div class="panel full">
-          <h3>職涯階段導航 · <span id="stage-label"></span></h3>
-          <p class="sub">結合你的階段，給出修煉路線</p>
-          <p style="color:var(--paper-dim)" id="stage-advice"></p>
-          <div id="stage-recos"></div>
-        </div>
+<div class="wrap">
+    <div class="quiz-shell">
+      <div class="progress"><i id="q-bar" style="width: 0%;"></i></div>
+      <div class="progress-meta">
+        <span>職涯定位測驗</span>
+        <span id="q-step">01 / 13</span>
       </div>
 
-      <div class="result-actions">
-        <a class="btn btn-gold" href="navigator.html">看完整職涯導航 <span class="arrow">→</span></a>
-        <a class="btn btn-ghost" href="companies.html">回顧四類公司</a>
-        <a class="btn btn-ghost" href="quiz.html">重新測驗</a>
+      <div class="qcard" id="q-card" style="">
+        <span class="qn" id="q-num">Q1</span>
+        <h2 id="q-title">你心目中理想的工作節奏是？</h2>
+        <div class="opts" id="q-opts"><button class="opt" type="button"><span class="mk">A</span><span>一人多工、什麼都碰，今天行銷明天談供應鏈</span></button><button class="opt" type="button"><span class="mk">B</span><span>層級分明、照簽呈與制度走，責任歸屬清楚</span></button><button class="opt" type="button"><span class="mk">C</span><span>對接亞太/全球團隊，把總部策略在地落地</span></button><button class="opt" type="button"><span class="mk">D</span><span>自訂目標、用數據衝刺，高度自主</span></button></div>
+      </div>
+
+      <div class="quiz-nav">
+        <button class="lnk" id="q-back" disabled="">← 上一題</button>
+        <span class="lnk" style="color:var(--muted);cursor:default">選擇後自動前進</span>
       </div>
     </div>
-  </section>
+  </div>
 </main>
 
 <footer class="footer">
